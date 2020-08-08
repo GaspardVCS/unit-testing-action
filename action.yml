@@ -1,0 +1,23 @@
+name: 'Ponicode Repository Unit Tester'
+description: 'Writes unit tests for all your repository'
+inputs: 
+  repo_path:
+    description: 'Path of repo to generate unit tests for'
+    required: true
+    default: './'
+  auth_token:
+    description: 'Ponicode token to use Ponicode API'
+    required: true
+    default: ''
+  write_expectations:
+    description: 'Boolean. Enter False to write only the input values and true to write input values + expectations'
+    required: true
+    default: 'true'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.repo_path }}
+    - ${{ inputs.auth_token }}
+    - ${{ inputs.write_expectations}}
+

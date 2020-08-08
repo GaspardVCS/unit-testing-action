@@ -1,0 +1,16 @@
+{
+    "name": "runner",
+    "version": "0.21.0",
+    "main": "index.js",
+    "types": "definitions/lib/index.d.ts",
+    "dependencies": {
+        "@jest/core": "26.0.1"
+    },
+    "files": [
+        "index.js",
+        "entry.js",
+        "runtime.js",
+        "watchplugin.js",
+        "showconfig.js"
+    ]
+}
