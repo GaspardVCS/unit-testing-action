@@ -65,7 +65,7 @@ jobs:
 **This yaml file writes your unit tests everytime you push on master and makes a pull request on a ponicode-tests branch with the test files created**
 
 ## **Step 2:** Add your Ponicode token to github secrets
-To get a Ponicode token, you must first subscribe to [ponicode](https://ponicode.com/). Once you are subscribed, open vs code and follow these steps:
+To get a Ponicode token, you must first subscribe to [ponicode](https://ponicode.com/) and have the Ponicode VS Code Extension installed. Once you are setup, open VS Code and follow these steps:
 - Go to VScode
 - Enter **ctrl + ,**
 - Enter 'ponicode' in the search bar
