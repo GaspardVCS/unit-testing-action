@@ -10,9 +10,13 @@ inputs:
     required: true
     default: ''
   write_expectations:
-    description: 'Boolean. Enter False to write only the input values and true to write input values + expectations'
+    description: 'Boolean. Enter false to write only the input values and true to write input values + expectations'
     required: true
     default: 'true'
+  from_diff:
+    description: 'Boolean. Enter true to generate test for changes since last repo or enter false if you want to generate for the whole repo'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -20,4 +24,5 @@ runs:
     - ${{ inputs.repo_path }}
     - ${{ inputs.auth_token }}
     - ${{ inputs.write_expectations}}
+    - ${{ inputs.from_diff}}
 

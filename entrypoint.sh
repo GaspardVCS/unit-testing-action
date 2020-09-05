@@ -1,1 +1,1 @@
-node /app/dist/main.js $1 $2 $3
+node /app/dist/main.js $1 $2 $3 $4
