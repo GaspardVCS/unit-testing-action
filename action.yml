@@ -17,6 +17,10 @@ inputs:
     description: 'Boolean. Enter true to generate test for changes since last repo or enter false if you want to generate for the whole repo'
     required: false
     default: 'false'
+  coverage_json_path:
+    description: 'String. Enter the path to your coverage-final.json (Example: coverage/coverage-final.json)'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,4 +29,4 @@ runs:
     - ${{ inputs.auth_token }}
     - ${{ inputs.write_expectations}}
     - ${{ inputs.from_diff}}
-
+    - ${{ inputs.coverage_json_path}}
